@@ -6,6 +6,9 @@ npm create vite@latest .
 [Install dependencies]
 npm install axios react-router-dom
 
+[START]
+npm start
+
 
 
 

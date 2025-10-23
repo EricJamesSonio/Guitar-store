@@ -1,0 +1,76 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Glassy card with soft blur and gradient border */
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.25);
+}
+
+/* Image takes full card width and adapts height */
+.product-img {
+  width: 100%;
+  aspect-ratio: 4/3; /* keeps consistent ratio */
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05) rotate(0.5deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.price {
+  color: #ffd700; /* gold-ish for premium look */
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+.add-to-cart-btn {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #a855f7, #3b82f6);
+  box-shadow: 0 6px 18px rgba(96,165,250,0.5);
+}

@@ -1,0 +1,34 @@
+nav {
+  position: fixed; /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px; /* define height */
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+
+/* Links inside navbar */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #2563eb; /* blue hover */
+}
+
+/* Brand/logo */
+nav .logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}

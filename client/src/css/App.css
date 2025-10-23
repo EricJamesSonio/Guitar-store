@@ -1,0 +1,50 @@
+/* App-level container with gradient and subtle shimmer */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d1cdef 0%, #08a970 100%);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Headings - glassy shimmer */
+.app-container h1,
+.app-container h2,
+.app-container h3,
+.app-container h4,
+.app-container h5,
+.app-container h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #111827;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+/* Paragraphs and spans */
+.app-container p,
+.app-container span {
+  font-size: 1rem;
+  color: #1f2937;
+  backdrop-filter: blur(1px);
+}
+
+/* Links with subtle glow */
+.app-container a {
+  text-decoration: none;
+  color: #3b82f6;
+  transition: all 0.3s ease;
+}
+
+.app-container a:hover {
+  color: #60a5fa;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

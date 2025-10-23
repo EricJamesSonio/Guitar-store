@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.1
+    container_name: guitar-db
+    restart: always
+    env_file:
+      - .env.docker
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./server/database/init.js:/docker-entrypoint-initdb.d/init.js # optional
+    ports:
+      - "3307:3306"
+
+  server:
+    build:
+      context: ./server
+    container_name: guitar-server
+    restart: always
+    env_file:
+      - .env.docker
+    environment:
+      - NODE_ENV=docker
+      - DOCKER_ENV_FILE=.env.docker
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    command: sh -c "npm run init-db && npm start"  # init DB first, then start server
+
+  client:
+    build:
+      context: ./client
+    container_name: guitar-client
+    restart: always
+    ports:
+      - "3000:80"
+
+volumes:
+  db_data:

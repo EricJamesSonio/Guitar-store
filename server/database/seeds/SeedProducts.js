@@ -7,7 +7,9 @@ export async function seedProducts() {
     ('Fender Stratocaster', 'Classic electric guitar', 899.99, 'fender.jpg', 1),
     ('Gibson Les Paul', 'Iconic rock guitar', 1199.99, 'fender2.jpg', 1),
     ('PRS Custom 24', 'Premium electric guitar', 1499.99, 'test.jpg', 1),
-    ('Taylor 214ce', 'Smooth acoustic guitar', 799.99, 'test2.jpg', 2)
+    ('Taylor 214ce', 'Smooth acoustic guitar', 799.99, 'test2.jpg', 2),
+    ('Test 214ce', 'Smooth acoustic guitar', 799.99, 'test2.jpg', 2),
+    ('Test Again 214ce', 'Smooth acoustic guitar', 799.99, 'test2.jpg', 2)
   `);
   console.log('✅ Products seeded');
 }
